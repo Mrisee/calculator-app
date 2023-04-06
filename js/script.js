@@ -32,9 +32,11 @@ function clickN() {
     } 
 };
 function addDot() {
-    if( display.value.length < 16) {
-        display.value += '.';
-    } 
+    if(display.value != '' & display.value.includes('.') == false) {
+        if( display.value.length < 16) {
+            display.value += '.';
+        } 
+    }
 };
 function deleteFunc() { // when we click on a number
     display.value = display.value.substring(0, display.value.length - 1);
