@@ -1,0 +1,127 @@
+@import "nullstyle.scss";
+@import url("https://fonts.google.com/share?selection.family=Space%20Grotesk:wght@300");
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.wrapper{
+    background-color: hsl(222, 26%, 31%);
+    height: 100vh;
+    width: 100%;
+}
+.conteiner {
+    height: 100%;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+}
+.calc-box {
+    height: 700px;
+    margin: auto;
+    width: 100%;
+}
+.calc-box__head {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    span{
+        color: hsl(0, 0%, 100%);
+        font-size: 28px;
+        font-weight: bold;
+        display: block;
+    }
+}
+.calc-box__display {
+    background-color: hsl(224, 36%, 15%);
+    height: 130px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    color: white;
+    line-height: 130px;
+    font-size: 48px;
+    padding: 0 20px;
+    overflow: hidden;
+    position: relative;
+}
+.calc-box__keypad {
+    background-color: hsl(223, 31%, 20%);
+    height: 500px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    padding: 10px;
+    div {
+        background-color: hsl(30, 25%, 89%);
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0px 6px hsl(28, 16%, 65%);
+        position: relative;
+        line-height: 56px;
+        color: hsl(221, 14%, 31%);
+        font-weight: bold;
+        transition: 100ms;
+        cursor: pointer;
+    }
+    div:hover{
+        top: 1px;
+        box-shadow: 0px 5px hsl(28, 16%, 65%);
+        background-color: hsl(30, 100%, 97%);
+    }
+    div:active{
+        top: 6px;
+        box-shadow: 0px 0px hsl(28, 16%, 65%);
+    }
+    #reset {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    #reset,
+    #del{
+        background-color: hsl(225, 21%, 49%);
+        box-shadow: 0px 6px hsl(224, 28%, 35%);
+        color: hsl(0, 0%, 100%);
+    }
+    #equals {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        background-color: hsl(6, 63%, 50%);
+        box-shadow: 0px 6px hsl(6, 70%, 34%);
+        color: hsl(0, 0%, 100%);
+    }
+    #equals:hover{
+        background-color: hsl(6, 71%, 57%);
+        box-shadow: 0px 5px hsl(6, 70%, 34%);
+        top: 1px;
+    }
+    #reset:hover,
+    #del:hover{
+        background-color: hsl(226, 24%, 60%);
+        box-shadow: 0px 5px hsl(224, 28%, 35%);
+        top: 1px;
+    }
+    #reset:active,
+    #del:active{
+        top: 6px;
+        box-shadow: 0px 0px hsl(224, 28%, 35%);
+    }
+    #equals:active {
+        top: 6px;
+        box-shadow: 0px 0px hsl(6, 70%, 34%);
+    }
+}
+.current-number{
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 22px;
+    color: rgba(194, 194, 194, 0.637);
+    line-height: 22px;
+}
