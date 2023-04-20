@@ -15,7 +15,27 @@
       <div class="calc-box">
         <div class="calc-box__head">
           <span>calc</span>
-          <input type="radio" name="" id="">
+          <div class="theme">
+            <span>THEME</span>
+            <div class="changer">
+              <div class="labels">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+              </div>
+              <div class='switcher'>
+                <label  class='switcher-label switcher-off' for='off1'>off</label>
+                <input id='off1' class='switcher-radio-off' type='radio' name='value1' value='off' checked>
+                
+                <label class='switcher-label switcher-neutral' for='neutral1'>neutral</label>
+                <input id='neutral1' class='switcher-radio-neutral' type='radio' name='value1' value='neutral'>
+                
+                <label class='switcher-label switcher-on' for='on1'>on</label>
+                <input id='on1' class='switcher-radio-on' type='radio' name='value1' value='on'>
+                <div class='switcher-slider'></div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="calc-box__display">
           <span class="current-number"></span>

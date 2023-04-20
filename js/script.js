@@ -38,36 +38,46 @@ function addDot() {
         } 
     }
 };
-function deleteFunc() { // when we click on a number
-    display.value = display.value.substring(0, display.value.length - 1);
+function deleteFunc() { 
+    if (display.value != '') {
+        display.value = display.value.substring(0, display.value.length - 1);
+    }
+    else {
+        if (curNum.textContent != '') {
+            display.value = parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2));
+            curNum.textContent = '';
+        }
+    }
 };
 function resFunc() {
     display.value = '';
     curNum.textContent = ''
 }
 function result() {
-    if(display.value == '') {
-        display.value = parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2))
-        curNum.textContent = '';
-    }
-    else {
-        if (curNum.textContent.includes('+')) {
-        display.value = parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) + parseFloat(display.value);
-        curNum.textContent = '';
-        }
-        if (curNum.textContent.includes('-')) {
-            display.value = parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) - parseFloat(display.value);
+    if (curNum.textContent != '') {
+        if(display.value == '') {
+            display.value = parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2))
             curNum.textContent = '';
         }
-        if (curNum.textContent.includes('*')) {
-            display.value = parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) * parseFloat(display.value);
+        else {
+            if (curNum.textContent.includes('+')) {
+            display.value = parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) + parseFloat(display.value);
             curNum.textContent = '';
+            }
+            if (curNum.textContent.includes('-')) {
+                display.value = parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) - parseFloat(display.value);
+                curNum.textContent = '';
+            }
+            if (curNum.textContent.includes('*')) {
+                display.value = parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) * parseFloat(display.value);
+                curNum.textContent = '';
+            }
+            if (curNum.textContent.includes('/')) {
+                display.value = parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) / parseFloat(display.value);
+                curNum.textContent = '';
+            } 
         }
-        if (curNum.textContent.includes('/')) {
-            display.value = parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) / parseFloat(display.value);
-            curNum.textContent = '';
-        } 
-    }
+    }   
 }
 function sum() {
     if(display.value !='') {
