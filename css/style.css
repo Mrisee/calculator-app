@@ -359,3 +359,34 @@ body {
 .switcher-radio-off:checked ~ .switcher-slider:after {
   left: 5px;
 }
+
+@media (max-width: 400px) {
+  .calc-box {
+    height: 600px;
+    grid-auto-rows: 0.5fr;
+    font-size: 24px;
+    margin: 0;
+  }
+  .calc-box__display {
+    height: 80px;
+    font-size: 36px;
+    line-height: 80px;
+  }
+  .calc-box__display span {
+    font-size: 20px;
+  }
+  .calc-box__display input {
+    position: relative;
+    top: 10px;
+  }
+  .calc-box__head {
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+  .calc-box__keypad {
+    height: 400px;
+  }
+  .calc-box__keypad div {
+    line-height: 36px;
+  }
+}
