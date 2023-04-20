@@ -1,5 +1,3 @@
-
-
 const sliderLeft = document.getElementById("off1");
 const sliderMiddle = document.getElementById("neutral1");
 const sliderRight = document.getElementById("on1");
@@ -91,59 +89,3 @@ sliderLeft.addEventListener('change', function (e) {
         document.documentElement.style.setProperty('--del-bg-hover', 'hsl(225, 31%, 57%)'); //
         document.documentElement.style.setProperty('--equals-bg-hover', 'hsl(6, 81%, 60%)'); //
 });
-
-/*
-function buttonsDropdown() {
-    var buttons = document.querySelectorAll('.calc-box__keypad > div')
-    for (var i = 0; i < buttons.length; i++) {
-        var self = buttons[i];
-        self.addEventListener('mouseover', function (event) {  
-            if (this.id != "reset" | this.id != "del") {
-                this.style.boxShadow = '0 5px hsl(35, 11%, 61%)';
-            }
-            if (this.id == "equals") {
-                this.style.boxShadow = '0 5px hsl(25, 99%, 27%)';
-            }
-            if (this.id == "del" | this.id == "reset") {
-                this.style.boxShadow = '0 5px hsl(185, 58%, 25%)';
-            };
-            this.style.top = '1px';
-        });
-        self.addEventListener('mouseout', function (event) {  
-            if (this.id != "reset" | this.id != "del") {
-                this.style.boxShadow = '0 6px hsl(35, 11%, 61%)';
-            }
-            if (this.id == "equals") {
-                this.style.boxShadow = '0 6px hsl(25, 99%, 27%)';
-            }
-            if (this.id == "del" | this.id == "reset") {
-                this.style.boxShadow = '0 6px hsl(185, 58%, 25%)';
-            };
-            this.style.top = '0px';
-        });
-        self.addEventListener('mousedown', function (event) {  
-            if (this.id != "reset" | this.id != "del") {
-                this.style.boxShadow = '0 0px hsl(35, 11%, 61%)';
-            }
-            if (this.id == "equals") {
-                this.style.boxShadow = '0 0px hsl(25, 99%, 27%)';
-            }
-            if (this.id == "del" | this.id == "reset") {
-                this.style.boxShadow = '0 0px hsl(185, 58%, 25%)';
-            };
-            this.style.top = '6px';
-        });
-        self.addEventListener('mouseup', function (event) {  
-            if (this.id != "reset" | this.id != "del") {
-                this.style.boxShadow = '0 5px hsl(35, 11%, 61%)';
-            }
-            if (this.id == "equals") {
-                this.style.boxShadow = '0 5px hsl(25, 99%, 27%)';
-            }
-            if (this.id == "del" | this.id == "reset") {
-                this.style.boxShadow = '0 5px hsl(185, 58%, 25%)';
-            };
-            this.style.top = '1px';
-        });
-    }
-}*/
