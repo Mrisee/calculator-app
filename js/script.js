@@ -79,6 +79,26 @@ function result() {
         }
     }   
 }
+
+function calculatorLogic() {
+    if (curNum.textContent.includes('+')) {
+        curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) + parseFloat(display.value));
+        display.value= '';
+        }
+    if (curNum.textContent.includes('-')) {
+        curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) - parseFloat(display.value));
+        display.value = '';
+    }
+    if (curNum.textContent.includes('*')) {
+        curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) * parseFloat(display.value));
+        display.value = '';
+    };
+    if (curNum.textContent.includes('/')) {
+        curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) / parseFloat(display.value));
+        display.value = '';
+    };
+}
+
 function sum() {
     if(display.value !='') {
         if(curNum.textContent == '') {
@@ -87,22 +107,7 @@ function sum() {
             display.value = '';
         }
         else {
-            if (curNum.textContent.includes('+')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) + parseFloat(display.value));
-                display.value= '';
-                }
-            if (curNum.textContent.includes('-')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) - parseFloat(display.value));
-                display.value = '';
-            }
-            if (curNum.textContent.includes('*')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) * parseFloat(display.value));
-                display.value = '';
-            };
-            if (curNum.textContent.includes('/')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) / parseFloat(display.value));
-                display.value = '';
-            };
+            calculatorLogic();
             curNum.textContent += ' +';
         };
     } else {
@@ -120,22 +125,7 @@ function subtraction() {
             display.value = '';
         }
         else {
-            if (curNum.textContent.includes('+')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) + parseFloat(display.value));
-                display.value= '';
-                }
-            if (curNum.textContent.includes('-')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) - parseFloat(display.value));
-                display.value = '';
-            }
-            if (curNum.textContent.includes('*')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) * parseFloat(display.value));
-                display.value = '';
-            }
-            if (curNum.textContent.includes('/')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) / parseFloat(display.value));
-                display.value = '';
-            };
+            calculatorLogic();
             curNum.textContent += ' -';
         };
     } else {
@@ -153,22 +143,7 @@ function multiply() {
             display.value = '';
         }
         else {
-            if (curNum.textContent.includes('+')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) + parseFloat(display.value));
-                display.value= '';
-                }
-            if (curNum.textContent.includes('-')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) - parseFloat(display.value));
-                display.value = '';
-            }
-            if (curNum.textContent.includes('*')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) * parseFloat(display.value));
-                display.value = '';
-            }
-            if (curNum.textContent.includes('/')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) / parseFloat(display.value));
-                display.value = '';
-            };
+            calculatorLogic();
             curNum.textContent += ' *';
         };
     } else {
@@ -186,22 +161,7 @@ function division() {
             display.value = '';
         }
         else {
-            if (curNum.textContent.includes('+')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) + parseFloat(display.value));
-                display.value= '';
-                }
-            if (curNum.textContent.includes('-')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) - parseFloat(display.value));
-                display.value = '';
-            }
-            if (curNum.textContent.includes('*')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) * parseFloat(display.value));
-                display.value = '';
-            }
-            if (curNum.textContent.includes('/')) {
-                curNum.textContent = String(parseFloat(curNum.textContent.substring(0, curNum.textContent.length - 2)) / parseFloat(display.value));
-                display.value = '';
-            };
+            calculatorLogic();
             curNum.textContent += ' /';
         };
     } else {
